@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap');
+
+:root {
+  --ecom-primary: #818CF8;
+  --ecom-primary-hover: #6366F1;
+  --ecom-bg-dark: #09090B;
+  --ecom-bg-card: #18181B;
+  --ecom-text-light: #FAFAFA;
+  --ecom-text-muted: #A1A1AA;
+  --ecom-accent: #34D399;
+}
+
+.layout-page {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--ecom-bg-dark);
+  color: var(--ecom-text-light);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.ecom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  background: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ecom-logo {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #818CF8, #C7D2FE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.ecom-nav-links {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.ecom-nav-link {
+  color: var(--ecom-text-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.ecom-nav-link:hover {
+  color: var(--ecom-primary);
+}
+
+.ecom-btn-primary {
+  background-color: var(--ecom-primary);
+  color: #111;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+
+.ecom-btn-primary:hover {
+  background-color: var(--ecom-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(129, 140, 248, 0.6);
+  color: #fff;
+}
+
+/* Footer */
+.ecom-footer {
+  margin-top: auto;
+  padding: 3rem 5%;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  color: var(--ecom-text-muted);
+  font-size: 0.9rem;
+}
+
+.ecom-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  color: var(--ecom-text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.admin-badge {
+  background-color: #F59E0B;
+  color: #111;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.ecom-btn-logout {
+  background-color: transparent;
+  color: var(--ecom-text-light);
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--ecom-text-muted);
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ecom-btn-logout:hover {
+  background-color: #DC2626;
+  border-color: #DC2626;
+}
+
+.ecom-btn-secondary {
+  background-color: transparent;
+  color: var(--ecom-text-light);
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid var(--ecom-text-muted);
+}
+
+.ecom-btn-secondary:hover {
+  background-color: var(--ecom-primary);
+  border-color: var(--ecom-primary);
+  color: #111;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  color: var(--ecom-text-light);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--ecom-text-muted);
+  border-top-color: var(--ecom-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
